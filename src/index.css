@@ -1,2 +1,52 @@
 @import "tailwindcss";
 
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hat-tryon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+video.hat-video, canvas.hat-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+canvas.hat-canvas {
+  pointer-events: none;
+}
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+.controls label {
+  display: block;
+  margin-bottom: 5px;
+}
+.model-picker {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.model-picker img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.model-picker img.selected {
+  border-color: blue;
+}
